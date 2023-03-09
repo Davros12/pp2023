@@ -49,16 +49,16 @@ def list_students():
 
 #Define a function to show marks of students
 #for any course
-def show_marks():
+def show_marks(c, s):
     cid = int(input("Enter course ID:"))
-    for i in range(len(courses)):
-        if courses[i][0] == cid:
-            print("Students mark for the subject", courses[i][1], ": ")
-            for j in range(len(students)):
-                print(students[i][1],":", student_mark[i][j])
+    for i in range(len(c)):
+        if c[i][0] == cid:
+            print("Students mark for the subject", c[i][1], ": ")
+            for j in range(len(s)):
+                print(s[i][1],":", s[i][j])
         else: 
             i+=1
-        if i>len(courses):
+        if i>len(c):
             print("Invalid course ID!")
             
 #define a list of student info
@@ -81,7 +81,7 @@ match op:
     case 3: 
         list_students()
     case 4: 
-        show_marks() 
+        show_marks(courses, students) 
     case _:
         print("Invalid choice")
         
