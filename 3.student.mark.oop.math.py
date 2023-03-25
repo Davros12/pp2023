@@ -51,7 +51,6 @@ class Manage:
         self.__no_courses = 0
         self.__students_list = []
         self.__courses_list = []
-        self.__gpa_list = np.array([])
     
     def get_students_list(self):
         return self.__students_list    
