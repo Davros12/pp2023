@@ -1,7 +1,7 @@
 from Domains import Students
 from Domains import Courses
 import numpy as np
-import math
+import zipfile
 
 def list_students(st_list):
     for i in range(len(st_list)):
@@ -37,3 +37,12 @@ def sort_students(st_list):
                 print(f"\nStudent ID: {st_list[j].get_id()} \n"
                         f"Student name: {st_list[j].get_student_name()} \n"
                         f"GPA: {st_list[j].get_gpa()} \n")
+                
+def compress_files(file1, file2, file3):
+    with open('Students.dat', 'w') as f:
+        f.write(file1)
+        f.write(file2)
+        f.write(file3)
+        f.close()
+        
+ 
